@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 - 0223</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'JetBrains Mono';
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #6D4C41;
+            perspective: 1000px;
+        }
+        .card-container {
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .card-container:hover {
+            transform: rotateY(180deg);
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .card-front {
+            background-color: #D7CCC8;
+            color: black;
+        }
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            background-image: url('picture.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 5px solid #6D4C41;
+        }
+        .name {
+            font-size: 1.1em;
+            margin: 10px 0 5px;
+            font-weight: bolder;
+        }
+        .title {
+            font-size: 0.9em;
+            color: gray;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .quote {
+            font-style: normal;
+            margin: 15px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8em;
+        }
+        .card-back {
+            background: #D7CCC8;
+            color: black;
+            transform: rotateY(180deg);
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">
+                <div class="profile-image"></div>
+                <div class="name">KIMBERLY JAZLIN JIMENEZ</div>
+                <div class="title">Software Development Student</div>
+                <div class="quote">"Junior Developer with knowledge of Web Application development using ASP.NET C#"</div>
+            </div>
+            <div class="card-back">
+                <h2>GitHub</h2>
+                <p>github.com/Jimjazlk</p><br>
+                <h2>2023 - 0223</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
